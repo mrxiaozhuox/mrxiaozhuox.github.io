@@ -24,9 +24,49 @@ pub fn Home(cx: Scope) -> Element {
                         class: "text-gray-500 dark:text-gray-300",
                         "Computer Science Student | Keen on new technologies."
                     }
-
+                    ul {
+                        class: "mt-3 dark:text-gray-100",
+                        li {
+                            "Studying in "
+                            a {
+                                class: "underline",
+                                href: "https://sjsu.edu",
+                                "San Jose State Unversity"
+                            }
+                        }
+                        li {
+                            "Working at "
+                            a {
+                                class: "underline",
+                                href: "https://dioxuslabs.com",
+                                "DioxusLabs"
+                            }
+                            " & "
+                            a {
+                                class: "underline",
+                                href: "https://dorea.mrxzx.info",
+                                "DoreaDB"
+                            }
+                        }
+                    }
                     Footer {}
                 }
+            }
+        }
+    })
+}
+
+pub fn Projects(cx: Scope) -> Element {
+    cx.render(rsx! {
+        section {
+            class: "h-screen bg-cover bg-white dark:bg-gray-600",
+            div {
+                class: "flex h-full w-full items-center justify-center container mx-auto px-8",
+                // h2 {
+                //     class: "text-xl",
+                //     "# Dioxus Ecosystem"
+                // }
+                Footer {}
             }
         }
     })

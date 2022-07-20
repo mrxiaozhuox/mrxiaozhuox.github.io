@@ -17,7 +17,7 @@ pub fn Footer(cx: Scope) -> Element {
     cx.render(rsx! {
         div {
             div {
-                class: "mt-6 flex space-x-4 justify-center",
+                class: "mt-8 flex space-x-4 justify-center font-semibold",
                 Link {
                     class: "text-black dark:text-white hover:text-gray-800 dark:hover:text-gray-200",
                     to: "/",
@@ -25,13 +25,13 @@ pub fn Footer(cx: Scope) -> Element {
                 }
                 Link {
                     class: "text-black dark:text-white hover:text-gray-800 dark:hover:text-gray-200",
-                    to: "/portfolio",
-                    "Portfolio"
+                    to: "/projects",
+                    "Projects"
                 }
                 Link {
                     class: "text-black dark:text-white hover:text-gray-800 dark:hover:text-gray-200",
                     to: "/resume",
-                    "Resume"
+                    "Blog"
                 }
                 a {
                     class: "text-black dark:text-white hover:text-gray dark:hover:text-gray-200",
@@ -60,6 +60,23 @@ pub fn Footer(cx: Scope) -> Element {
                     Icon {
                         size: 26,
                         icon: fa_brands_icons::FaGithub
+                    }
+                }
+                a {
+                    class: "text-black dark:text-white hover:text-gray-800 dark:hover:text-gray-200",
+                    href: "https://www.zhihu.com/people/mrxiao-zhuo-x",
+                    Icon {
+                        size: 26,
+                        icon: fa_brands_icons::FaZhihu
+                    }
+                }
+
+                a {
+                    class: "text-black dark:text-white hover:text-gray-800 dark:hover:text-gray-200",
+                    href: "https://twitter.com/mrxiaozhuox",
+                    Icon {
+                        size: 26,
+                        icon: fa_brands_icons::FaTwitter
                     }
                 }
             }

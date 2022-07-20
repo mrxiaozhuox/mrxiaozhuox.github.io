@@ -31,6 +31,7 @@ fn App(cx: Scope) -> Element {
         // dioxus router info
         Router {
             Route { to: "/", Home {} }
+            Route { to: "/projects", Projects {} }
             
             Route { to: "", _404::NotFound {} }
         }
