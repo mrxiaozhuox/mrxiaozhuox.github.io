@@ -1,6 +1,6 @@
 use dioxus::prelude::*;
 
-use crate::components::footer::Footer;
+use crate::components::{footer::Footer, nav::Navbar};
 
 pub mod _404;
 
@@ -56,17 +56,107 @@ pub fn Home(cx: Scope) -> Element {
     })
 }
 
+#[derive(Debug, Clone)]
+struct Category {
+    pub name: &'static str,
+    pub projects: Vec<Project>,
+}
+#[derive(Debug, Clone)]
+struct Project {
+    pub name: &'static str,
+    pub desc: &'static str,
+    pub url: &'static str,
+    pub job: &'static str,
+}
+
 pub fn Projects(cx: Scope) -> Element {
+    let data: Vec<Category> = vec![
+        Category {
+            name: "Dioxus Ecosystem",
+            projects: vec![
+                Project {
+                    name: "Dioxus Cli",
+                    desc: "Tooling to supercharge dioxus projects",
+                    url: "https://github.com/DioxusLabs/cli",
+                    job: "Maintainer",
+                },
+                Project {
+                    name: "Dioxus Starter",
+                    desc: "Starter template for dioxus framework",
+                    url: "https://github.com/mrxiaozhuox/dioxus-starter",
+                    job: "Author",
+                },
+                Project {
+                    name: "Dioxus Toast",
+                    desc: "Add toast support for your dioxus project",
+                    url: "https://github.com/mrxiaozhuox/dioxus-starter",
+                    job: "Author",
+                },
+                Project {
+                    name: "Diogen",
+                    desc: "A static site generator powered by dioxus [WIP]",
+                    url: "https://github.com/mrxiaozhuox/diogen",
+                    job: "Author"
+                }
+            ],
+        },
+        Category {
+            name: "Website | Online Tool",
+            projects: vec![
+                Project {
+                    name: "Teacher Pod",
+                    desc: "Podcast app for learning [WIP]",
+                    url: "https://github.com/commune-org/teacher-pod",
+                    job: "Full-Stack Developer"
+                }
+            ],
+        },
+    ];
+
+    let displayer = data.iter().map(|v| {
+        rsx! {
+            h2 {
+                class: "text-xl font-bold",
+                "# {v.name}"
+            }
+            div {
+                class: "mt-4 grid md:grid-cols-2 gap-2 mb-8",
+                v.projects.iter().map(|p| {
+                    rsx! {
+                        a {
+                            class: "block p-4 rounded-lg shadow-lg bg-white w-64 dark:bg-gray-700 hover:bg-gray-200",
+                            href: "{p.url}",
+                            target: "_blank",
+                            h5 {
+                                class: "text-gray-900 dark:text-white text-xl leading-tight font-semibold mb-2",
+                                "{p.name}"
+                            }
+                            p {
+                                class: "text-gray-700 dark:text-gray-200 text-base mb-2",
+                                "{p.desc}"
+                            }
+                            p {
+                                class: "text-gray-400 dark:text-gray-500 text-base",
+                                "{p.job}"
+                            }
+                        }
+                    }
+                })
+            }
+        }
+    });
+
     cx.render(rsx! {
         section {
-            class: "h-screen bg-cover bg-white dark:bg-gray-600",
+            class: "bg-cover bg-white dark:bg-gray-600 dark:text-white",
+            Navbar {}
             div {
                 class: "flex h-full w-full items-center justify-center container mx-auto px-8",
-                // h2 {
-                //     class: "text-xl",
-                //     "# Dioxus Ecosystem"
-                // }
-                Footer {}
+                div {
+                    class: "max-w-5xl text-center",
+                    displayer
+                    Footer {}
+                }
             }
         }
     })
