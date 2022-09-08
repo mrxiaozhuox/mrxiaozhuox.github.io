@@ -39,13 +39,13 @@ pub fn Home(cx: Scope) -> Element {
                             a {
                                 class: "underline",
                                 href: "https://dioxuslabs.com",
-                                "DioxusLabs"
+                                "Dioxus Labs"
                             }
                             " & "
                             a {
                                 class: "underline",
                                 href: "https://dorea.mrxzx.info",
-                                "DoreaDB"
+                                "Dorea DB"
                             }
                         }
                     }
@@ -105,7 +105,7 @@ pub fn Projects(cx: Scope) -> Element {
             projects: vec![
                 Project {
                     name: "Teacher Pod",
-                    desc: "Podcast app for learning [WIP]",
+                    desc: "Podcast app for learning",
                     url: "https://github.com/commune-org/teacher-pod",
                     job: "Full-Stack Developer"
                 }
@@ -155,6 +155,80 @@ pub fn Projects(cx: Scope) -> Element {
                 div {
                     class: "max-w-5xl text-center",
                     displayer
+                    Footer {}
+                }
+            }
+        }
+    })
+}
+
+pub fn About(cx: Scope) -> Element {
+    cx.render(rsx! {
+        section {
+            class: "bg-cover bg-white dark:bg-gray-600 dark:text-white",
+            Navbar {}
+            div {
+                class: "flex h-full w-full items-center justify-center container mx-auto px-8",
+                div {
+                    class: "max-w-5xl text-center",
+                    img {
+                        class: "rounded-lg w-32 mb-4 mx-auto",
+                        src: "https://avatars.githubusercontent.com/u/41265098?v=4"
+                    }
+                    div {
+                        class: "space-y-4 text-gray-900 dark:text-gray-300",
+                        p {
+                            "Hi, My name is YuKun Liu, currently I'm a student in "
+                            strong {
+                                class: "underline",
+                                "San Jose State University"
+                            }
+                            "."
+                        }
+                        p {
+                            "My email - ",
+                            a {
+                                class: "underline font-bold",
+                                href: "mailto:mrxzx.info@gmail.com",
+                                "mrxzx.info@gmail.com"
+                            }
+                        }
+                        p {
+                            "My hometown - ",
+                            strong {
+                                "ChengDu, China 🐼"
+                            }
+                        }
+                        p {
+                            "My favorite company - ",
+                            strong {
+                                "Apple Inc 🍎"
+                            }
+                        }
+                        p {
+                            "My favorite tech stack - ",
+                            strong {
+                                "Rust, Typescript, Postgresql, Redis",
+                            }
+                        }
+                        p {
+                            "or you can use "
+                            a {
+                                class: "font-bold",
+                                href: "javascript:;",
+                                title: "mrxiaozhuox",
+                                "Wechat"
+                            }
+                            " & "
+                            a {
+                                class: "font-bold",
+                                href: "javascript:;",
+                                title: "3507952990",
+                                "QQ"
+                            }
+                            " to contact me."
+                        }
+                    }
                     Footer {}
                 }
             }

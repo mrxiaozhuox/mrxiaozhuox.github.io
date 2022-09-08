@@ -30,13 +30,13 @@ pub fn Footer(cx: Scope) -> Element {
                 }
                 Link {
                     class: "text-black dark:text-white hover:text-gray-800 dark:hover:text-gray-200",
-                    to: "/resume",
+                    to: "/blog",
                     "Blog"
                 }
-                a {
+                Link {
                     class: "text-black dark:text-white hover:text-gray dark:hover:text-gray-200",
-                    href: "mailto:mrxzx.info@gmail.com",
-                    "Contact"
+                    to: "/about",
+                    "About"
                 }
             }
             div {
@@ -70,7 +70,14 @@ pub fn Footer(cx: Scope) -> Element {
                         icon: fa_brands_icons::FaZhihu
                     }
                 }
-
+                a {
+                    class: "text-black dark:text-white hover:text-gray-800 dark:hover:text-gray-200",
+                    href: "https://www.instagram.com/mrxiaozhuox/",
+                    Icon {
+                        size: 26,
+                        icon: fa_brands_icons::FaInstagram
+                    }
+                }
                 a {
                     class: "text-black dark:text-white hover:text-gray-800 dark:hover:text-gray-200",
                     href: "https://twitter.com/mrxiaozhuox",
@@ -79,6 +86,15 @@ pub fn Footer(cx: Scope) -> Element {
                         icon: fa_brands_icons::FaTwitter
                     }
                 }
+            }
+            div {
+                class: "mt-5 text-gray-400 text-sm",
+                a {
+                    class: "underline",
+                    href: "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+                    "CC BY-NC-SA 4.0"
+                }
+                " @YuKun Liu"
             }
         }
     })
