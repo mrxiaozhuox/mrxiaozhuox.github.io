@@ -72,6 +72,23 @@ struct Project {
 pub fn Projects(cx: Scope) -> Element {
     let data: Vec<Category> = vec![
         Category {
+            name: "Web Development",
+            projects: vec![
+                Project {
+                    name: "LyApi",
+                    desc: "A PHP web & api development framework",
+                    url: "https://gitee.com/mrxzx/LyApi",
+                    job: "Author",
+                },
+                Project {
+                    name: "Denly",
+                    desc: "A deno web development framework (closed)",
+                    url: "https://github.com/mrxiaozhuox/denly",
+                    job: "Author",
+                }
+            ],
+        },
+        Category {
             name: "Dioxus Ecosystem",
             projects: vec![
                 Project {
@@ -101,6 +118,23 @@ pub fn Projects(cx: Scope) -> Element {
             ],
         },
         Category {
+            name: "Database Development",
+            projects: vec![
+                Project {
+                    name: "Dorea",
+                    desc: "A Key-Value data storage system",
+                    url: "https://github.com/mrxiaozhuox/dorea",
+                    job: "Author"
+                },
+                Project {
+                    name: "Doson",
+                    desc: "Doson structure parser - The extended format of json",
+                    url: "https://github.com/doreadb/doson",
+                    job: "author",
+                }
+            ],
+        },
+        Category {
             name: "Website | Online Tool",
             projects: vec![
                 Project {
@@ -108,9 +142,26 @@ pub fn Projects(cx: Scope) -> Element {
                     desc: "Podcast app for learning",
                     url: "https://github.com/commune-org/teacher-pod",
                     job: "Full-Stack Developer"
+                },
+                Project {
+                    name: "Dioxus Hackernews",
+                    desc: "Hackernews made with Dioxus",
+                    url: "https://github.com/mrxiaozhuox/dioxus-hackernews",
+                    job: "Author"
                 }
             ],
         },
+        Category {
+            name: "Other Tools",
+            projects: vec![
+                Project {
+                    name: "Metadata Parser",
+                    desc: "parse & get markdown meta-data | Rust Library |",
+                    url: "https://github.com/mrxiaozhuox/markdown-meta-parser",
+                    job: "author"
+                }
+            ]
+        }
     ];
 
     let displayer = data.iter().map(|v| {
