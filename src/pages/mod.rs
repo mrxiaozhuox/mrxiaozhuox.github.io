@@ -23,7 +23,7 @@ pub fn Home(cx: Scope) -> Element {
                     }
                     p {
                         class: "text-gray-500 dark:text-gray-300",
-                        "Computer Science Student | Keen on new technologies."
+                        "Computer Engineering | Keen on new technologies."
                     }
                     ul {
                         class: "mt-3 dark:text-gray-100",
