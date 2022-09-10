@@ -87,14 +87,6 @@ pub fn Footer(cx: Scope) -> Element {
                     }
                 }
             }
-            div {
-                class: "mt-5 text-gray-400 text-sm underline",
-                a {
-                    href: "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-                    "CC BY-NC-SA 4.0"
-                }
-                " @YuKun Liu"
-            }
         }
     })
 }

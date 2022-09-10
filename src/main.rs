@@ -33,7 +33,10 @@ fn App(cx: Scope) -> Element {
             Route { to: "/", Home {} }
             Route { to: "/projects", Projects {} }
             Route { to: "/about", About { } }
-            
+
+            Route { to: "/blog", blog::BlogList {} }
+            Route { to: "/blog/:path", blog::BlogPage {} }
+
             Route { to: "", _404::NotFound {} }
         }
     })

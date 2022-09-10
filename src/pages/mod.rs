@@ -3,6 +3,7 @@ use dioxus::prelude::*;
 use crate::components::{footer::Footer, nav::Navbar};
 
 pub mod _404;
+pub mod blog;
 
 pub fn Home(cx: Scope) -> Element {
     cx.render(rsx! {
