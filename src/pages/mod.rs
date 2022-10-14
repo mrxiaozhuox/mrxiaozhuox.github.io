@@ -86,7 +86,13 @@ pub fn Projects(cx: Scope) -> Element {
                     desc: "A deno web development framework (closed)",
                     url: "https://github.com/mrxiaozhuox/denly",
                     job: "Author",
-                }
+                },
+                Project {
+                    name: "Dioxus",
+                    desc: "User interfaces that run anywhere.",
+                    url: "https://dioxuslabs.com/",
+                    job: "member",
+                },
             ],
         },
         Category {
@@ -119,7 +125,7 @@ pub fn Projects(cx: Scope) -> Element {
             ],
         },
         Category {
-            name: "Database Development",
+            name: "Database System",
             projects: vec![
                 Project {
                     name: "Dorea",
