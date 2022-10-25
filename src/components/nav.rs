@@ -10,8 +10,9 @@ pub fn Navbar(cx: Scope) -> Element {
                     class: "relative flex items-center justify-between h-16",
                     div {
                         class: "flex-1 flex items-center justify-center sm:items-stretch sm:justify-start",
-                        div {
+                        Link {
                             class: "flex-shrink-0 flex items-center font-bold text-2xl",
+                            to: "/",
                             "mrxzx.info"
                         }
                         div {
@@ -32,6 +33,11 @@ pub fn Navbar(cx: Scope) -> Element {
                                     class: "text-gray-800 dark:text-gray-200 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium",
                                     to: "/blog",
                                     "Blog"
+                                }
+                                Link {
+                                    class: "text-gray-800 dark:text-gray-200 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium",
+                                    to: "/about",
+                                    "About"
                                 }
                             }
                         }

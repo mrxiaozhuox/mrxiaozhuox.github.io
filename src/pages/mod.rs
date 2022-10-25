@@ -9,8 +9,9 @@ pub fn Home(cx: Scope) -> Element {
     cx.render(rsx! {
         section {
             class: "h-screen bg-cover bg-white dark:bg-gray-600",
+            Navbar {}
             div {
-                class: "flex h-full w-full items-center justify-center container mx-auto px-8",
+                class: "flex h-4/6 w-full items-center justify-center container mx-auto px-8",
                 div {
                     class: "max-w-2xl text-center",
                     img {
@@ -91,7 +92,7 @@ pub fn Projects(cx: Scope) -> Element {
                     name: "Dioxus",
                     desc: "User interfaces that run anywhere.",
                     url: "https://dioxuslabs.com/",
-                    job: "member",
+                    job: "Member",
                 },
             ],
         },
@@ -137,7 +138,7 @@ pub fn Projects(cx: Scope) -> Element {
                     name: "Doson",
                     desc: "Doson structure parser - The extended format of json",
                     url: "https://github.com/doreadb/doson",
-                    job: "author",
+                    job: "Author",
                 }
             ],
         },
@@ -159,13 +160,13 @@ pub fn Projects(cx: Scope) -> Element {
             ],
         },
         Category {
-            name: "Other Tools",
+            name: "Rust Dev Crates",
             projects: vec![
                 Project {
                     name: "Metadata Parser",
                     desc: "parse & get markdown meta-data | Rust Library |",
                     url: "https://github.com/mrxiaozhuox/markdown-meta-parser",
-                    job: "author"
+                    job: "Author"
                 }
             ]
         }
@@ -255,12 +256,6 @@ pub fn About(cx: Scope) -> Element {
                             "My hometown - ",
                             strong {
                                 "ChengDu, China 🐼"
-                            }
-                        }
-                        p {
-                            "My favorite company - ",
-                            strong {
-                                "Apple Inc 🍎"
                             }
                         }
                         p {

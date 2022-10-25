@@ -69,5 +69,3 @@ input = "*"
 # ]
 
 source_map = true
-
-[plugin]
