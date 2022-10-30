@@ -78,7 +78,7 @@ pub fn Projects(cx: Scope) -> Element {
             projects: vec![
                 Project {
                     name: "LyApi",
-                    desc: "A PHP web & api development framework",
+                    desc: "A PHP web development framework",
                     url: "https://gitee.com/mrxzx/LyApi",
                     job: "Author",
                 },
