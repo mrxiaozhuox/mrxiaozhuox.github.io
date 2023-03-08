@@ -8,6 +8,7 @@ mod components;
 mod hooks;
 mod pages;
 
+use fermi::use_init_atom_root;
 use hooks::mode::init_mode_info;
 
 use pages::*;
@@ -23,6 +24,7 @@ fn main() {
 fn App(cx: Scope) -> Element {
     // init mode information
     init_mode_info(&cx);
+    use_init_atom_root(&cx);
     cx.render(rsx! {
         // dioxus toast manager init
         ToastFrame {
