@@ -232,7 +232,7 @@ pub fn BlogPage(cx: Scope) -> Element {
                     class: "bg-cover bg-white dark:bg-gray-600 dark:text-white",
                     Navbar {}
                     div {
-                        class: "flex h-full w-full items-center justify-center container mx-auto px-8",
+                        class: "md:flex h-full w-full justify-center px-6",
                         div {
                             class: "max-w-5xl",
                             h1 {

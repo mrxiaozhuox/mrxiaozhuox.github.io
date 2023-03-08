@@ -88,5 +88,6 @@ pub fn Footer(cx: Scope) -> Element {
                 }
             }
         }
+        br {}
     })
 }
