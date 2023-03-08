@@ -247,7 +247,7 @@ pub fn BlogPage(cx: Scope) -> Element {
                                 class: "mt-2 w-60",
                             }
                             div {
-                                class: "prose mt-4 dark:text-white",
+                                class: "prose mt-4 dark:text-white dark:prose-invert",
                                 dangerous_inner_html: "{html_output}"
                             }
                             hr {
