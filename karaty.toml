@@ -1,7 +1,7 @@
 [site]
 
-name = "My Blog"
-title-suffix = " | YuKun Liu"
+name = "mrxzx.info"
+title-suffix = " | mrxzx.info"
 dark-mode = true
 
 [repository]
