@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>{app_title}</title>
+  <title>Karaty | Static Personal Profile & Blog Generator</title>
   <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="UTF-8" />
   <link rel="shortcut icon" href="favicon.ico">
-  {style_include}
+  <link rel="stylesheet" href="/assets/highlight/styles/dracula.css">
+
 </head>
-<body class="dark:bg-gray-600">
+
+<body class="dark:bg-gray-900">
   <!-- Dioxus Starter: https://github.com/mrxiaozhuox/dixous-starter -->
   <div id="main"></div>
   <script type="module">
-    import init from "/{base_path}/assets/dioxus/{app_name}.js";
-    init("/{base_path}/assets/dioxus/{app_name}_bg.wasm").then(wasm => {
+    import init from "/./assets/dioxus/karaty.js";
+    init("/./assets/dioxus/karaty_bg.wasm").then(wasm => {
       if (wasm.__wbindgen_start == undefined) {
         wasm.main();
       }
     });
   </script>
-  {script_include}
+  <script src="/assets/tailwind/tailwind.min.js"></script>
+<script src="/assets/tailwind/tailwind.config.js"></script>
+<script src="/assets/highlight/highlight.min.js"></script>
+
 </body>
+
 </html>

@@ -1,0 +1,17 @@
+[[routing]]
+path = "/"
+file = "pages/home.md"
+
+[[routing]]
+path = "/author"
+file = "pages/author.md"
+
+[[routing]]
+path = "/blog"
+file = "posts"
+template = "blog::list"
+
+[[routing]]
+path = "/blog/:path"
+file = "posts/{path}.md"
+template = "blog::content"

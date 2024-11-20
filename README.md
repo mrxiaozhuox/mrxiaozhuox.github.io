@@ -40,8 +40,7 @@
 ## Try it
 
 ```
-dx create --template=gh:mrxiaozhuox/dioxus-starter
-# give the name my-dioxus-app
+dioxus create my-dioxus-app --template=gh:mrxiaozhuox/dioxus-starter
 cd my-dioxus-app
-dx serve
+dioxus serve
 ```
